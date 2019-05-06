@@ -36,7 +36,7 @@ if __name__ == "__main__":
     pipe = zip(input_data, input_data)
 
     for _, l in pipe:
-        if "[no test files]" in l:
+        if "[no test files]" in l or "no tests to run" in l:
             untested_modules += 1
             continue
         average         += float(clean_coverage_line(l))
