@@ -47,7 +47,7 @@ if __name__ == "__main__":
     {tested_modules} tested modules with an coverage average of {average:3.2f}%. {untested_modules} modules contain 0 tests. 
     """.format(
         name=name,
-        average=average/tested_modules,
+        average=average/tested_modules if tested_modules > 0 else 0,
         tested_modules=tested_modules,
         untested_modules=untested_modules
     )
